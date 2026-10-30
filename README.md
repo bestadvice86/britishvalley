@@ -18,5 +18,5 @@ Logowanie: GitHub (token dostępu albo „Sign in with GitHub” przez autoryzat
 ## Pliki
 - `index.html` – szablon strony (Liquid), treść bierze z `_data/`.
 - `admin/` – panel (`config.yml` opisuje pola formularzy).
-- `logo.svg` – logo tymczasowe, do podmiany na oryginalne.
+- `logo.png` – logo hodowli (przezroczyste tło), `favicon.png` – ikona karty.
 - `CNAME` – domena.

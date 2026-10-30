@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>British Valley – hodowla kotów brytyjskich, Koszalin</title>
 <meta name="description" content="Cattery British Valley PL – hodowla kotów brytyjskich krótkowłosych (BSH) i długowłosych (BLH) w Maszkowie pod Koszalinem. Felis Polonia / FIFe. Kocięta, mioty, zasady rezerwacji.">
-<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="icon" href="{{ '/favicon.png' | relative_url }}" type="image/png">
+<link rel="apple-touch-icon" href="{{ '/favicon.png' | relative_url }}">
 <meta property="og:title" content="British Valley – hodowla kotów brytyjskich">
 <meta property="og:description" content="Koty brytyjskie krótko- i długowłose z Koszalina. Felis Polonia (FIFe).">
 <meta property="og:type" content="website">
@@ -41,9 +42,9 @@ section{padding:88px 0}
 
 /* nawigacja */
 .top{position:sticky;top:0;z-index:10;background:rgba(242,244,246,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Young Serif",serif;font-size:1.2rem}
-.brand svg{width:34px;height:34px}
+.brand img{height:44px;width:44px;display:block}
 .top nav{display:flex;gap:22px;font-size:.95rem}
 .top nav a{text-decoration:none;color:var(--coat)}
 .top nav a:hover{color:var(--ink)}
@@ -54,12 +55,7 @@ section{padding:88px 0}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px}
 .hero h1{font-size:clamp(2.6rem,6.5vw,4.6rem);letter-spacing:-.01em;margin-bottom:.35em}
 .hero p{font-size:1.15rem;color:#3B4654}
-.hero-cat{width:100%;max-width:420px;justify-self:end;color:var(--ink)}
-.hero-cat path.body{stroke-dasharray:1500;stroke-dashoffset:1500;animation:draw 2.4s ease-out .2s forwards}
-.hero-cat .eye{opacity:0;animation:open .5s ease-out 2.4s forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-@keyframes open{to{opacity:1}}
-@media(prefers-reduced-motion:reduce){.hero-cat path.body{animation:none;stroke-dashoffset:0}.hero-cat .eye{animation:none;opacity:1}}
+.hero-cat{width:100%;max-width:340px;height:auto;justify-self:end}
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .btn{display:inline-block;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.98rem}
 .btn-main{background:var(--ink);color:var(--paper)}
@@ -146,10 +142,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 {%- assign s = site.data.strona -%}
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#start" aria-label="British Valley – strona główna">
-      <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#cat-line"/></svg>
-      British Valley
-    </a>
+    <a class="brand" href="#start" aria-label="British Valley – strona główna"><img src="{{ '/favicon.png' | relative_url }}" alt="" width="44" height="44">British Valley</a>
     <nav aria-label="Główna">
       <a href="#hodowla">O hodowli</a>
       <a href="#kocieta">Kocięta</a>
@@ -160,11 +153,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   </div>
 </header>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <path id="cat-line" d="M30 178 H118 C146 178 160 164 157 142 C154 120 140 108 134 92 C130 80 132 68 136 58 L144 30 L122 46 C113 43 104 43 96 46 L76 30 L80 60 C74 72 76 88 88 96 C98 102 110 100 116 96 C102 112 94 138 98 178 M157 142 C170 150 182 150 184 138 C186 128 178 124 172 128"/>
-  </defs>
-</svg>
+
 
 <main id="start">
 
@@ -195,11 +184,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
         <span>Maszkowo k. Koszalina</span>
       </div>
     </div>
-    <svg class="hero-cat" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Kot narysowany jedną linią">
-      <path class="body" d="M30 178 H118 C146 178 160 164 157 142 C154 120 140 108 134 92 C130 80 132 68 136 58 L144 30 L122 46 C113 43 104 43 96 46 L76 30 L80 60 C74 72 76 88 88 96 C98 102 110 100 116 96 C102 112 94 138 98 178 M157 142 C170 150 182 150 184 138 C186 128 178 124 172 128"/>
-      <circle class="eye" cx="96" cy="68" r="4" fill="#B8711A" stroke="none"/>
-      <circle class="eye" cx="120" cy="68" r="4" fill="#B8711A" stroke="none"/>
-    </svg>
+    <img class="hero-cat" src="{{ '/logo.png' | relative_url }}" alt="Logo hodowli British Valley – kot narysowany jedną linią" width="402" height="524">
   </div>
 </section>
 
