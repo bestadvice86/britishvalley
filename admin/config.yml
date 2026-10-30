@@ -9,7 +9,7 @@ backend:
 
 site_url: https://britishvalley.pl
 display_url: https://britishvalley.pl
-logo_url: /logo.svg
+logo_url: /logo.png
 
 media_folder: img
 public_folder: /img
