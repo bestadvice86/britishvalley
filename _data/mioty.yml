@@ -1,0 +1,69 @@
+mioty:
+  - nazwa: Miot F
+    urodzone: 11 czerwca 2026
+    matka: Sisi Britishvalley*PL
+    ojciec: ""
+    opis: ""
+    kocieta:
+      - imie: Florian
+        plec: kocur
+        rasa: ""
+        umaszczenie: rudy
+        status: Dostępne
+        zdjecie: ""
+      - imie: Fiona
+        plec: kotka
+        rasa: BLH
+        umaszczenie: niebieska szylkretka
+        status: Zapytaj o dostępność
+        zdjecie: /img/fiona.jpg
+      - imie: Figaro
+        plec: kocur
+        rasa: BLH
+        umaszczenie: czarny dymny
+        status: Zapytaj o dostępność
+        zdjecie: /img/figaro.jpg
+      - imie: Flora
+        plec: kotka
+        rasa: BLH
+        umaszczenie: niebieska
+        status: Zapytaj o dostępność
+        zdjecie: ""
+    filmy: []
+  - nazwa: Miot E
+    urodzone: początek czerwca 2026
+    matka: ""
+    ojciec: ""
+    opis: "Sześcioro kociąt: dwa cynamonowe, dwa rude, dwa tricolor."
+    kocieta:
+      - imie: Elodie
+        plec: kotka
+        rasa: ""
+        umaszczenie: cynamonowa
+        status: Zapytaj o dostępność
+        zdjecie: /img/elodie.jpg
+      - imie: Edgar
+        plec: kocur
+        rasa: BSH
+        umaszczenie: bicolor
+        status: Zapytaj o dostępność
+        zdjecie: /img/edgar.jpg
+      - imie: Esme
+        plec: kotka
+        rasa: ""
+        umaszczenie: ""
+        status: Zapytaj o dostępność
+        zdjecie: ""
+      - imie: Estelle
+        plec: kotka
+        rasa: ""
+        umaszczenie: ""
+        status: Zapytaj o dostępność
+        zdjecie: ""
+      - imie: Everest
+        plec: kocur
+        rasa: ""
+        umaszczenie: ""
+        status: Zapytaj o dostępność
+        zdjecie: ""
+    filmy: []
