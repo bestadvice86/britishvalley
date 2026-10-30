@@ -1,0 +1,126 @@
+backend:
+  name: github
+  repo: bestadvice86/britishvalley
+  branch: main
+  commit_messages:
+    update: "Panel: zmiana {{slug}}"
+    uploadMedia: "Panel: dodano {{path}}"
+    deleteMedia: "Panel: usunięto {{path}}"
+
+site_url: https://britishvalley.pl
+display_url: https://britishvalley.pl
+logo_url: /logo.svg
+
+media_folder: img
+public_folder: /img
+media_libraries:
+  default:
+    config:
+      max_file_size: 52428800   # 50 MB (filmy)
+      slugify_filename: true
+      transformations:
+        raster_image:
+          format: webp
+          quality: 85
+          width: 1600
+          height: 1600
+
+collections:
+  - name: strona
+    label: Strona
+    files:
+      - name: mioty
+        label: Kocięta i mioty
+        file: _data/mioty.yml
+        fields:
+          - name: mioty
+            label: Mioty
+            label_singular: miot
+            widget: list
+            summary: "{{fields.nazwa}} ({{fields.urodzone}})"
+            fields:
+              - { name: nazwa, label: Nazwa miotu, widget: string, hint: "np. Miot G" }
+              - { name: urodzone, label: Data urodzenia, widget: string, required: false, hint: "np. 11 czerwca 2026" }
+              - { name: matka, label: Matka, widget: string, required: false }
+              - { name: ojciec, label: Ojciec, widget: string, required: false }
+              - { name: opis, label: Krótki opis, widget: text, required: false }
+              - name: kocieta
+                label: Kocięta
+                label_singular: kocię
+                widget: list
+                summary: "{{fields.imie}} – {{fields.status}}"
+                fields:
+                  - { name: imie, label: Imię, widget: string }
+                  - { name: plec, label: Płeć, widget: select, options: [kocur, kotka], required: false }
+                  - { name: rasa, label: Rasa, widget: select, options: [BSH, BLH], required: false }
+                  - { name: umaszczenie, label: Umaszczenie, widget: string, required: false }
+                  - name: status
+                    label: Status
+                    widget: select
+                    default: Zapytaj o dostępność
+                    options: [Dostępne, Zapytaj o dostępność, Zarezerwowane, W nowym domu]
+                  - { name: zdjecie, label: Zdjęcie, widget: image, required: false }
+              - name: filmy
+                label: Filmy
+                label_singular: film
+                widget: list
+                required: false
+                fields:
+                  - { name: youtube, label: Link do YouTube, widget: string, required: false, hint: "Wklej link do filmu na YouTube albo dodaj plik poniżej." }
+                  - { name: plik, label: Plik wideo (MP4), widget: file, required: false, hint: "Krótkie nagranie z telefonu, najlepiej do 50 MB." }
+                  - { name: pionowy, label: Film pionowy (z telefonu), widget: boolean, default: true, required: false }
+                  - { name: opis, label: Opis, widget: string, required: false }
+
+      - name: galeria
+        label: Galeria na górze strony
+        file: _data/galeria.yml
+        fields:
+          - name: zdjecia
+            label: Zdjęcia
+            label_singular: zdjęcie
+            widget: list
+            summary: "{{fields.opis}}"
+            fields:
+              - { name: zdjecie, label: Zdjęcie, widget: image }
+              - { name: opis, label: Krótki opis (dla wyszukiwarek i niewidomych), widget: string, required: false }
+
+      - name: koty
+        label: Nasze koty (rodzice)
+        file: _data/koty.yml
+        fields:
+          - name: koty
+            label: Koty
+            label_singular: kot
+            widget: list
+            summary: "{{fields.imie}} ({{fields.plec}})"
+            fields:
+              - { name: imie, label: Imię z przydomkiem, widget: string }
+              - { name: plec, label: Płeć, widget: select, options: [samica, samiec] }
+              - { name: rasa, label: Rasa, widget: select, options: [BSH, BLH], required: false }
+              - { name: umaszczenie, label: Umaszczenie, widget: string, required: false }
+              - { name: opis, label: Opis, widget: text, required: false }
+              - { name: zdjecie, label: Zdjęcie, widget: image, required: false }
+
+      - name: teksty
+        label: Teksty i kontakt
+        file: _data/strona.yml
+        fields:
+          - { name: o_hodowli, label: O hodowli, widget: markdown }
+          - { name: zdjecie_o_hodowli, label: Zdjęcie przy „O hodowli”, widget: image, required: false }
+          - { name: kocieta_wstep, label: Wstęp do sekcji Kocięta, widget: text }
+          - { name: rezerwacja_wstep, label: Wstęp do zasad rezerwacji, widget: text }
+          - name: kroki
+            label: Kroki rezerwacji
+            label_singular: krok
+            widget: list
+            summary: "{{fields.tytul}}"
+            fields:
+              - { name: tytul, label: Tytuł, widget: string }
+              - { name: opis, label: Opis, widget: text }
+          - { name: kontakt_wstep, label: Tekst w sekcji Kontakt, widget: text }
+          - { name: hodowczyni, label: Hodowczyni, widget: string }
+          - { name: telefon, label: Telefon, widget: string }
+          - { name: email, label: E-mail, widget: string, required: false }
+          - { name: instagram, label: Instagram (nazwa konta bez @), widget: string }
+          - { name: facebook, label: Facebook (link), widget: string }
+          - { name: miejsce, label: Miejsce, widget: string }
