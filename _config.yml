@@ -1,0 +1,7 @@
+# Jekyll (GitHub Pages) – minimalna konfiguracja
+title: British Valley
+lang: pl
+exclude:
+  - README.md
+include:
+  - admin
